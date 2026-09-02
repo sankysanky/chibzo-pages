@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Șterge contul — Chibzo</title>
+<style>
+  :root {
+    --accent: #6C5CE7;
+    --accent-light: #EDE9FF;
+    --text: #1A1A2E;
+    --text-secondary: #666666;
+    --bg: #F8F7FC;
+    --card: #FFFFFF;
+    --border: #F0EEFF;
+    --danger: #E74C3C;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  .logo {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4834D4, #6C5CE7);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 800; font-size: 22px;
+    flex-shrink: 0;
+  }
+  h1 { font-size: 24px; font-weight: 800; margin: 0; letter-spacing: -0.3px; }
+  p { font-size: 15px; margin: 0 0 16px; }
+  .steps {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 4px 20px;
+    margin: 24px 0;
+  }
+  .step {
+    display: flex;
+    gap: 14px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .step:last-child { border-bottom: none; }
+  .num {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-text { font-size: 14px; padding-top: 3px; }
+  .step-text strong { display: block; font-size: 15px; margin-bottom: 2px; }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 36px 0 28px;
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .card-alt {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 20px;
+  }
+  .card-alt h2 { font-size: 16px; margin: 0 0 8px; }
+
+  .warning {
+    background: #FDF0EF;
+    border: 1px solid rgba(231, 76, 60, 0.25);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: var(--danger);
+    margin: 24px 0;
+  }
+
+  form { margin-top: 8px; }
+  label { display: block; font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; }
+  input[type=email] {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    font-size: 15px;
+    margin-bottom: 14px;
+    background: var(--bg);
+  }
+  button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(90deg, #6C5CE7, #A29BFE);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.6; cursor: default; }
+  .msg { font-size: 13px; margin-top: 12px; }
+  .msg.ok { color: #27AE60; }
+  .msg.err { color: var(--danger); }
+
+  a.mail { color: var(--accent); font-weight: 600; text-decoration: none; }
+  a.mail:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">C</div>
+    <h1>Șterge contul Chibzo</h1>
+  </header>
+
+  <p>Poți șterge definitiv contul tău Chibzo și toate datele sincronizate
+  în cloud în două moduri — direct din aplicație, sau de aici, dacă nu mai
+  ai aplicația instalată.</p>
+
+  <div class="warning">
+    Ștergerea contului este definitivă și nu poate fi anulată. Toate datele
+    sincronizate în cloud (email, abonamente sincronizate) vor fi șterse
+    permanent în maxim 30 de zile.
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <div class="step-text"><strong>Din aplicație (recomandat)</strong>
+      Deschide Chibzo → Setări → Cont → Șterge contul. Ștergerea este
+      instantă.</div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div class="step-text"><strong>Fără aplicație instalată</strong>
+      Folosește formularul de mai jos sau scrie-ne direct pe email — vom
+      confirma și procesa cererea manual.</div>
+    </div>
+  </div>
+
+  <div class="divider">sau, dacă nu ai aplicația</div>
+
+  <div class="card-alt">
+    <h2>Cere ștergerea contului</h2>
+    <p style="margin-bottom: 18px; color: var(--text-secondary); font-size: 13px;">
+      Introdu adresa de email folosită la contul Chibzo. Vom confirma
+      identitatea și vom șterge contul manual, în maxim 30 de zile.
+    </p>
+    <form id="deleteForm">
+      <label for="email">Email-ul contului</label>
+      <input type="email" id="email" name="email" required placeholder="nume@exemplu.com">
+      <button type="submit" id="submitBtn">Trimite cererea de ștergere</button>
+    </form>
+    <div id="formMsg"></div>
+  </div>
+
+  <p style="margin-top: 24px; font-size: 13px; color: var(--text-secondary);">
+    Poți scrie și direct la
+    <a class="mail" href="mailto:chibzo.app@gmail.com?subject=Cerere%20stergere%20cont%20Chibzo">
+    chibzo.app@gmail.com</a>.
+  </p>
+
+  <footer>
+    Chibzo — vezi și <a href="./privacy_policy.html">politica de confidențialitate</a>
+  </footer>
+
+</div>
+
+<script>
+  // NOTĂ PENTRU DEZVOLTATOR:
+  // Acest formular NU trimite nimic momentan — e doar UI. Cea mai simplă
+  // variantă funcțională, fără backend suplimentar, e să înlocuiești
+  // submit-ul cu un „mailto:" auto-completat (vezi comentariul din cod),
+  // sau să conectezi formularul la un serviciu simplu tip Formspree/Basin,
+  // sau la propriul tău Supabase Edge Function care doar înregistrează
+  // cererea într-un tabel „deletion_requests" pentru procesare manuală.
+  document.getElementById('deleteForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    const msg = document.getElementById('formMsg');
+
+    if (!email) return;
+
+    // Varianta minimă, fără backend: deschide clientul de email cu
+    // subiectul și adresa precompletate. Înlocuiește cu un apel real
+    // (fetch către Edge Function / Formspree) când ai backend pentru asta.
+    const mailto = 'mailto:chibzo.app@gmail.com'
+      + '?subject=' + encodeURIComponent('Cerere stergere cont Chibzo')
+      + '&body=' + encodeURIComponent('Va rog sa stergeti contul Chibzo asociat cu adresa: ' + email);
+    window.location.href = mailto;
+
+    msg.textContent = 'Se deschide clientul de email cu cererea precompletată...';
+    msg.className = 'msg ok';
+  });
+</script>
+
+</body>
+</html>

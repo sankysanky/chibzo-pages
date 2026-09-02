@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politica de confidențialitate — Chibzo</title>
+<style>
+  :root {
+    --accent: #6C5CE7;
+    --accent-light: #EDE9FF;
+    --text: #1A1A2E;
+    --text-secondary: #666666;
+    --bg: #F8F7FC;
+    --card: #FFFFFF;
+    --border: #F0EEFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .logo {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4834D4, #6C5CE7);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 800; font-size: 22px;
+    flex-shrink: 0;
+  }
+  h1 { font-size: 26px; font-weight: 800; margin: 0; letter-spacing: -0.3px; }
+  .updated { color: var(--text-secondary); font-size: 13px; margin: 4px 0 40px 0; }
+  h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 40px 0 12px;
+    padding-top: 4px;
+  }
+  p { margin: 0 0 14px; color: var(--text); font-size: 15px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 8px; font-size: 15px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  a:hover { text-decoration: underline; }
+  .contact {
+    background: var(--accent-light);
+    border-radius: 14px;
+    padding: 20px;
+    margin-top: 48px;
+  }
+  .contact h2 { margin-top: 0; }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">C</div>
+    <h1>Chibzo</h1>
+  </header>
+  <p class="updated">Ultima actualizare: <!-- ÎNLOCUIEȘTE cu data reală --> 1 septembrie 2026</p>
+
+  <p>
+    Chibzo este o aplicație pentru gestionarea abonamentelor tale personale.
+    Această pagină explică ce date colectăm, de ce, și cum le poți controla.
+  </p>
+
+  <h2>Ce date colectăm</h2>
+  <p>Chibzo funcționează complet fără cont. Datele pe care le introduci —
+  numele abonamentelor, prețurile, datele de facturare, notițele — sunt
+  stocate <strong>local, pe telefonul tău</strong>, și nu părăsesc dispozitivul
+  decât dacă alegi explicit să te autentifici și să activezi sincronizarea în cloud.</p>
+
+  <div class="card">
+    <p><strong>Dacă îți creezi un cont</strong> (opțional), colectăm:</p>
+    <ul>
+      <li>Adresa de email, folosită exclusiv pentru autentificare.</li>
+      <li>Dacă activezi sincronizarea în cloud: numele, prețul, categoria,
+      data de facturare și notițele abonamentelor tale.</li>
+    </ul>
+  </div>
+
+  <h2>Cum folosim datele</h2>
+  <p>Datele sincronizate în cloud sunt folosite exclusiv ca să-ți poți accesa
+  abonamentele de pe alt dispozitiv sau după reinstalarea aplicației. Nu
+  folosim datele tale în scopuri publicitare și nu le vindem sau
+  închiriem către terți.</p>
+
+  <h2>Unde sunt stocate datele</h2>
+  <p>Datele locale rămân pe telefonul tău (folosind o bază de date locală,
+  Hive). Dacă activezi sincronizarea, datele sunt stocate în infrastructura
+  Supabase, criptate în tranzit (HTTPS/TLS).</p>
+
+  <h2>Notificări</h2>
+  <p>Aplicația poate trimite notificări locale (programate pe telefonul tău)
+  înainte de datele de plată ale abonamentelor. Aceste notificări sunt
+  generate și livrate direct pe dispozitiv — nu implică transmiterea vreunei
+  informații către servere externe.</p>
+
+  <h2>Partajare cu terți</h2>
+  <p>Nu partajăm datele tale personale cu terți în scopuri comerciale sau
+  publicitare. Singurul furnizor implicat în procesarea datelor (dacă
+  folosești sincronizarea în cloud) este Supabase, care acționează ca
+  procesator de date în numele nostru.</p>
+
+  <h2>Drepturile tale</h2>
+  <p>Poți oricând:</p>
+  <ul>
+    <li>Șterge datele locale direct din aplicație (Setări → Șterge toate datele).</li>
+    <li>Șterge contul și toate datele sincronizate în cloud direct din
+    aplicație (Setări → Cont → Șterge contul).</li>
+    <li>Solicita ștergerea contului și din afara aplicației, folosind
+    <a href="./delete_account.html">această pagină</a> sau scriindu-ne
+    la adresa de mai jos.</li>
+  </ul>
+
+  <h2>Copii</h2>
+  <p>Chibzo nu este destinată copiilor sub 13 ani și nu colectăm intenționat
+  date de la aceștia.</p>
+
+  <h2>Modificări ale acestei politici</h2>
+  <p>Putem actualiza această politică din când în când. Orice modificare
+  semnificativă va fi reflectată prin actualizarea datei de mai sus.</p>
+
+  <div class="contact">
+    <h2>Contact</h2>
+    <p>Pentru orice întrebare legată de confidențialitate sau de datele tale,
+    ne poți scrie la:
+    <a href="mailto:chibzo.app@gmail.com">chibzo.app@gmail.com</a></p>
+  </div>
+
+  <footer>
+    Chibzo — Controlul abonamentelor tale
+  </footer>
+
+</div>
+</body>
+</html>
